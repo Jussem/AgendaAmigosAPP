@@ -10,8 +10,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
- *
- * @author juanb
+ @author Juan José Morales A.
+ * @version 20250327
+ * @since 1.0
  */
 public class AgregarAmigo extends javax.swing.JDialog {
     private Agenda agenda;
@@ -197,6 +198,7 @@ public class AgregarAmigo extends javax.swing.JDialog {
         JOptionPane.showMessageDialog(this, "El telefono debe iniciar con '606 o '30'", "Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
+        
         
         Amigo nuevoamigo=new Amigo(nombre,telefono,correo);
         agenda.agregarAmigo(nuevoamigo);

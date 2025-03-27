@@ -155,7 +155,7 @@ public class EliminarAmigo extends javax.swing.JDialog {
             return;
         }
         int respuesta = JOptionPane.showConfirmDialog(null, "¿Está seguro de que quiere eliminarlo?","Confirmación", JOptionPane.YES_NO_OPTION);
-        if(respuesta==JOptionPane.YES_NO_OPTION){
+        if(respuesta==JOptionPane.YES_OPTION){
         agenda.eliminarAmigo(correo);
         }
         this.dispose();

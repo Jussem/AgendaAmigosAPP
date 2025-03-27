@@ -14,25 +14,38 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
 /**
+ * Clase VentanaPrincipal que representa la interfaz gráfica de la aplicación.
+ * Permite gestionar amigos en la agenda mediante una tabla y botones de acción.
  *
- * @author juanb
+ * @author Juan José Morales A.
+ * @version 20250327
+ * @since 1.0
  */
 public class VentanaPrincipal extends javax.swing.JFrame {
-    private Agenda agenda;
+    private Agenda agenda;// Objeto que maneja la lista de amigos
+
     /**
-     * Creates new form VentanaPrincipal
+     * Constructor de la clase VentanaPrincipal.
+     * Inicializa los componentes de la interfaz y configura la ventana.
      */
     public VentanaPrincipal() {
         initComponents();
         setLocationRelativeTo(null);
         try{
+            // Establece el icono de la ventana principal
             this.setIconImage(new ImageIcon(getClass().getResource("/autonoma/AgendaAmigosAPP/images/Listar.png")).getImage());
+            // Captura y maneja posibles errores al cargar el icono
         }catch(Exception e){
         
         }
-        this.agenda=new Agenda();
-        llenarTabla();
+        this.agenda=new Agenda();// Inicializa la agenda de amigos
+        llenarTabla();// Llena la tabla con los datos de los amigos registrados
     }
+    /**
+     * Método que inicializa los componentes de la interfaz.
+     * Este método es generado automáticamente por el Form Editor de NetBeans.
+     * WARNING: No modificar el código manualmente.
+     */
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -428,6 +441,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
         EliminarAmigo ventanaEliminarAmigo=new EliminarAmigo(this,true,agenda,this);
         ventanaEliminarAmigo.setVisible(true);
+        llenarTabla();
     }//GEN-LAST:event_btnEliminarMouseClicked
 
     private void btnEliminarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarMouseEntered
@@ -458,6 +472,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         panel.setBackground(new Color(246, 242, 194));
     }
     
+    /**
+     * Llena la tabla con la información de los amigos registrados en la agenda.
+     */
     public void llenarTabla(){
         DefaultTableModel modelo = new DefaultTableModel();
     
