@@ -5,7 +5,6 @@
 package autonoma.AgendaAmigosAPP.main;
 
 import autonoma.AgendaAmigosAPP.models.Agenda;
-import autonoma.AgendaAmigosAPP.models.Amigo;
 import autonoma.AgendaAmigosAPP.views.VentanaPrincipal;
 
 /**
